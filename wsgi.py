@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hotel.settings")
+# setting file used in production mode(applies with gunicorn)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.base")
 
 application = get_wsgi_application()
