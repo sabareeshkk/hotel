@@ -1,6 +1,6 @@
 """Login view for the users."""
 
-# from django.shortcuts import render
+from django.shortcuts import render
 # from django.views.generic import TemplateView
 from django.views.generic import View
 
@@ -12,3 +12,7 @@ class LoginView(View):
 
     template loaded here
     """
+
+    def get(self, request):
+        """Login view for the users."""
+        return render(request, 'login.html')
