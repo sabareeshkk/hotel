@@ -1,0 +1,2 @@
+dif: 
+   git diff
