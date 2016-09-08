@@ -3,7 +3,7 @@
 from django.shortcuts import render
 # from django.views.generic import TemplateView
 from django.views.generic import View
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
 
 from .models import User
@@ -44,4 +44,13 @@ class RegisterView(View):
         user_name = request.POST.get('username', None)
         password = request.POST.get('password', None)
         User.objects.create_user(email, user_name, password)
+        return redirect('login')
+
+
+class LogoutView(View):
+    """Used to kickuser out from the territory."""
+
+    def get(self, request):
+        """Logout the user and redirect to login page."""
+        logout(request)
         return redirect('login')
