@@ -1,0 +1,20 @@
+{
+  "name": "hotel",
+  "homepage": "https://github.com/sabareeshkk/hotel",
+  "authors": [
+    "sabareeshk <sabareeshk199@gmail.com>"
+  ],
+  "description": "toast messages for success and errors",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-toast-plugin": "^1.3.1"
+  }
+}
